@@ -9,7 +9,7 @@ import java.util.Date;
  * 客户
  */
 //装配该bean
-@Component(value = "employee")
+@Component(value = "customer")
 public class Customer {
     //客户主键
     private Integer customerId;

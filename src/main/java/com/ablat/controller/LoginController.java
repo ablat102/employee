@@ -1,5 +1,12 @@
 package com.ablat.controller;
 
+import org.springframework.stereotype.Controller;
 
-public class LoginController {
+/**
+ * 登录控制器
+ */
+@Controller(value = "loginController")
+public interface LoginController {
+
+
 }

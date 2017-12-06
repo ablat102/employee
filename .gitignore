@@ -2,4 +2,5 @@
 target
 employee.iml
 .idea
+*.class
 
