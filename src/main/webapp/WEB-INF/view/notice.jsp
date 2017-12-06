@@ -13,7 +13,7 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
     <script language="JavaScript" src="${path}/js/jquery.js"></script>
     <script language="JavaScript" src="${path}/js/common.js"></script>
     <title>新建公告</title>
@@ -25,19 +25,19 @@
     <div class="txtMarquee-left">
         <div class="bd">
             <ul class="infoList">
-                <li><a href="${path}/notice_details.jsp">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
-                <li><a href="${path}/notice_details.jsp">施强：高端专业语言教学</a><span>[11-11]</span></li>
-                <li><a href="${path}/notice_details.jsp">新加坡留学，国际双语课程</a><span>[11-11]</span></li>
-                <li><a href="${path}/notice_details.jsp">高考后留学日本名校随你选</a><span>[11-11]</span></li>
-                <li><a href="${path}/notice_details.jsp">教育培训行业优势资源推介</a><span>[11-11]</span></li>
-                <li><a href="${path}/notice_details.jsp">女友坚持警局完婚不抛弃</a><span>[11-11]</span></li>
+                <li><a href="${path}/WEB-INF/view/notice_details.jsp">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+                <li><a href="${path}/WEB-INF/view/notice_details.jsp">施强：高端专业语言教学</a><span>[11-11]</span></li>
+                <li><a href="${path}/WEB-INF/view/notice_details.jsp">新加坡留学，国际双语课程</a><span>[11-11]</span></li>
+                <li><a href="${path}/WEB-INF/view/notice_details.jsp">高考后留学日本名校随你选</a><span>[11-11]</span></li>
+                <li><a href="${path}/WEB-INF/view/notice_details.jsp">教育培训行业优势资源推介</a><span>[11-11]</span></li>
+                <li><a href="${path}/WEB-INF/view/notice_details.jsp">女友坚持警局完婚不抛弃</a><span>[11-11]</span></li>
             </ul>
         </div>
     </div>
 </div>
 <div style="margin:0 20px;">
     <div class="btngroups">
-        <div><a href="${path}/new_notice.jsp">新建公告</a>
+        <div><a href="${path}/WEB-INF/view/new_notice.jspew_notice.jsp">新建公告</a>
             <a style="margin-left: 20px;">删除</a></div>
         <div class="search">
             <input type="text" value="请输入搜索内容"/>
@@ -64,7 +64,7 @@
             <td>本单位联合红心美凯龙家具公司对于家具展开发展展开讨论，望家具部积极参与。</td>
             <td>2016年2月17日16:34:06</td>
             <td>2人已阅读，3人未阅读</td>
-            <td><a href="${path}/new_notice.jsp" class="tablelink"> 修改</a></td>
+            <td><a href="${path}/WEB-INF/view/new_notice.jspew_notice.jsp" class="tablelink"> 修改</a></td>
 
         </tr>
 
@@ -74,7 +74,7 @@
             <td>本单位联合红心美凯龙家具公司对于家具展开发展展开讨论，望家具部积极参与。</td>
             <td>2016年2月17日16:34:06</td>
             <td>2人已阅读，3人未阅读</td>
-            <td><a href="${path}/new_notice.jsp" class="tablelink"> 修改</a></td>
+            <td><a href="${path}/WEB-INF/view/new_notice.jspew_notice.jsp" class="tablelink"> 修改</a></td>
         </tr>
 
         <tr>
@@ -83,7 +83,7 @@
             <td>本单位联合红心美凯龙家具公司对于家具展开发展展开讨论，望家具部积极参与。</td>
             <td>2016年2月17日16:34:06</td>
             <td>2人已阅读，3人未阅读</td>
-            <td><a href="${path}/new_notice.jsp" class="tablelink">修改</a></td>
+            <td><a href="${path}/WEB-INF/view/new_notice.jspew_notice.jsp" class="tablelink">修改</a></td>
         </tr>
 
         <tr>
@@ -92,7 +92,7 @@
             <td>本单位联合红心美凯龙家具公司对于家具展开发展展开讨论，望家具部积极参与。</td>
             <td>2016年2月17日16:34:06</td>
             <td>2人已阅读，3人未阅读</td>
-            <td><a href="${path}/new_notice.jsp" class="tablelink"> 修改</a></td>
+            <td><a href="${path}/WEB-INF/view/new_notice.jspew_notice.jsp" class="tablelink"> 修改</a></td>
         </tr>
 
         <tr>
@@ -101,7 +101,7 @@
             <td>本单位联合红心美凯龙家具公司对于家具展开发展展开讨论，望家具部积极参与。</td>
             <td>2016年2月17日16:34:06</td>
             <td>2人已阅读，3人未阅读</td>
-            <td><a href="${path}/new_notice.jsp" class="tablelink"> 修改</a></td>
+            <td><a href="${path}/WEB-INF/view/new_notice.jspew_notice.jsp" class="tablelink"> 修改</a></td>
         </tr>
 
         </tbody>

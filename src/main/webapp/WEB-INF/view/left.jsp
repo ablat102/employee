@@ -46,7 +46,7 @@
 <div class="bgcover"></div>
 <dl class="leftmenu">
     <dd>
-        <a href="${path}/notice.jsp" target="rightFrame">
+        <a href="${path}/WEB-INF/view/notice.jsp" target="rightFrame">
             <div class="title ddactive">
                 <span><img src="${path}/images/i09.png" width="28px" height="28px"/></span>公告
                 <div style="clear:both;"></div>
@@ -69,7 +69,7 @@
     <dd>
         <div class="title">
                 <span>
-                    <img src="images/icon02.png" width="28px"/>
+                    <img src="../../images/icon02.png" width="28px"/>
                 </span>设计部
             <div style="clear:both;"></div>
         </div>
@@ -80,7 +80,7 @@
     </dd>
     <dd>
         <div class="title">
-            <span><img src="images/i08.png" width="28px"/></span>商务部
+            <span><img src="../../images/i08.png" width="28px"/></span>商务部
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
@@ -91,7 +91,7 @@
     <dd>
         <div class="title">
                 <span>
-                    <img src="images/i04.png" width="28px"/>
+                    <img src="../../images/i04.png" width="28px"/>
                 </span>家具部
             <div style="clear:both;"></div>
         </div>
@@ -103,7 +103,7 @@
     <dd>
         <div class="title">
                 <span>
-                    <img src="images/icon05.png" width="28px"/>
+                    <img src="../../images/icon05.png" width="28px"/>
                 </span>系统管理
             <div style="clear:both;"></div>
         </div>
@@ -118,7 +118,7 @@
     <dd>
         <div class="title">
                 <span>
-                    <img src="images/c03.png" width="28px"/>
+                    <img src="../../images/c03.png" width="28px"/>
                 </span>公共库
             <div style="clear:both;"></div>
         </div>

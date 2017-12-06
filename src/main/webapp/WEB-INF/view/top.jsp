@@ -12,7 +12,7 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
     <title>Title</title>
     <style type="text/css">
         .user {
@@ -26,7 +26,7 @@
             content: "";
             width: 50px;
             height: 50px;
-            background: url(images/admin.png) no-repeat;
+            background: url(../../images/admin.png) no-repeat;
             display: inline-block;
             background-size: cover;
             vertical-align: middle;
@@ -48,10 +48,10 @@
 
     </style>
 </head>
-<body style=" width: 100%; height:90px;background-image: url('images/bg.png');background-size: cover;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg.png',sizingMethod='scale'); ">
+<body style=" width: 100%; height:90px;background-image: url('../../images/bg.png');background-size: cover;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg.png',sizingMethod='scale'); ">
 <div class="bgcover"></div>
 <div style="" class="user">admin，欢迎登陆</div>
-<div style="margin: 28px auto; width: 500px;"><img src="images/logo.png"/></div>
+<div style="margin: 28px auto; width: 500px;"><img src="../../images/logo.png"/></div>
 <a class="quit" href="login.html" target="_blank">退&nbsp;&nbsp;出</a>
 <div style="clear: both"></div>
 </body>

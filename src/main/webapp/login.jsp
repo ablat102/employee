@@ -141,7 +141,7 @@
             <div class="login-input" style="">
                 <div><label>用户名：</label><input type="text" placeholder="请输入用户名"></div>
                 <div><label>密&nbsp;&nbsp;&nbsp;码：</label><input type="password" placeholder="请输入密码"></div>
-                <div class="login-btn"><a href="${pageContext.request.contextPath}/main.jsp">登陆</a><span class="forget">忘记密码?</span>
+                <div class="login-btn"><a href="${pageContext.request.contextPath}/WEB-INF/view/main.jsp">登陆</a><span class="forget">忘记密码?</span>
                 </div>
             </div>
         </div>

@@ -16,10 +16,10 @@
     <title>Title</title>
 </head>
 <frameset rows="90,*" cols="*" frameborder="no" border="0" framespacing="0">
-    <frame src="${path}/top.jsp" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame"/>
+    <frame src="${pageContext.request.contextPath}/WEB-INF/view/top.jsp" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame"/>
     <frameset cols="187,*" frameborder="no" border="0" framespacing="0">
-        <frame src="${path}/left.jsp" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame"/>
-        <frame src="${path}/notice.jsp" name="rightFrame" id="rightFrame" title="rightFrame"/>
+        <frame src="${path}/WEB-INF/view/left.jspview/left.jsp" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame"/>
+        <frame src="${path}/WEB-INF/view/notice.jsp" name="rightFrame" id="rightFrame" title="rightFrame"/>
     </frameset>
 </frameset>
 <noframes>

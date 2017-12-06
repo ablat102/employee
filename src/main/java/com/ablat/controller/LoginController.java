@@ -8,5 +8,4 @@ import org.springframework.stereotype.Controller;
 @Controller(value = "loginController")
 public interface LoginController {
 
-
 }
