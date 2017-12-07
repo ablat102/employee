@@ -35,8 +35,47 @@ public class Employee {
     //员工权限
     private Integer employeeLive;
     //员工所属部门id
-    @Autowired
-    private ChildDepartment childDepartmentId;
+
+    private Integer childDepartmentId;
+
+    /**
+     * 无参构造方法
+     */
+    public Employee() {
+    }
+
+    /**
+     * 有参构造方法
+     *
+     * @param employeeId
+     * @param employeeName
+     * @param employeePassword
+     * @param employeeNo
+     * @param employeePhone
+     * @param employeeSex
+     * @param employeeAge
+     * @param employeeQq
+     * @param employeeBrithday
+     * @param employeeEmail
+     * @param employeeStatus
+     * @param employeeLive
+     */
+    public Employee(Integer employeeId, String employeeName, String employeePassword, String employeeNo, String employeePhone, Integer employeeSex, Integer employeeAge, String employeeQq, Date employeeBrithday, Integer employeeEmail, Integer employeeStatus, Integer employeeLive,Integer childDepartmentId) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+        this.employeePassword = employeePassword;
+        this.employeeNo = employeeNo;
+        this.employeePhone = employeePhone;
+        this.employeeSex = employeeSex;
+        this.employeeAge = employeeAge;
+        this.employeeQq = employeeQq;
+        this.employeeBrithday = employeeBrithday;
+        this.employeeEmail = employeeEmail;
+        this.employeeStatus = employeeStatus;
+        this.employeeLive = employeeLive;
+        this.childDepartmentId = childDepartmentId;
+    }
+
 
     public Integer getEmployeeId() {
         return employeeId;
@@ -134,11 +173,11 @@ public class Employee {
         this.employeeLive = employeeLive;
     }
 
-    public ChildDepartment getChildDepartmentId() {
+    public Integer getChildDepartmentId() {
         return childDepartmentId;
     }
 
-    public void setChildDepartmentId(ChildDepartment childDepartmentId) {
+    public void setChildDepartmentId(Integer childDepartmentId) {
         this.childDepartmentId = childDepartmentId;
     }
 }

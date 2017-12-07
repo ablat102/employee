@@ -12,8 +12,8 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="renderer" content="webkit">
-<link href="${path}/css/style.css" rel="stylesheet" type="text/css"/>
-<script language="JavaScript" src="${path}/js/jquery.js"></script>
+<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css"/>
+<script language="JavaScript" src="${pageContext.request.contextPath}/js/jquery.js"></script>
 <title>公告详情</title>
 </head>
 
@@ -24,12 +24,12 @@
     <div class="txtMarquee-left">
         <div class="bd">
             <ul class="infoList">
-                <li><a href="${path}/WEB-INF/view/notice_details.jsp">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
-                <li><a href="${path}/WEB-INF/view/notice_details.jsp">施强：高端专业语言教学</a><span>[11-11]</span></li>
-                <li><a href="${path}/WEB-INF/view/notice_details.jsp">新加坡留学，国际双语课程</a><span>[11-11]</span></li>
-                <li><a href="${path}/WEB-INF/view/notice_details.jsp">高考后留学日本名校随你选</a><span>[11-11]</span></li>
-                <li><a href="${path}/WEB-INF/view/notice_details.jsp">教育培训行业优势资源推介</a><span>[11-11]</span></li>
-                <li><a href="${path}/WEB-INF/view/notice_details.jsp">女友坚持警局完婚不抛弃</a><span>[11-11]</span></li>
+                <li><a href="${pageContext.request.contextPath}/notice_details">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+                <li><a href="${pageContext.request.contextPath}/notice_details">施强：高端专业语言教学</a><span>[11-11]</span></li>
+                <li><a href="${pageContext.request.contextPath}/notice_details">新加坡留学，国际双语课程</a><span>[11-11]</span></li>
+                <li><a href="${pageContext.request.contextPath}/notice_details">高考后留学日本名校随你选</a><span>[11-11]</span></li>
+                <li><a href="${pageContext.request.contextPath}/notice_details">教育培训行业优势资源推介</a><span>[11-11]</span></li>
+                <li><a href="${pageContext.request.contextPath}/notice_details">女友坚持警局完婚不抛弃</a><span>[11-11]</span></li>
             </ul>
         </div>
     </div>

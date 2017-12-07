@@ -20,6 +20,20 @@ public class ChildDepartment {
     @Autowired
     private Department departmentId;
 
+    /**
+     * 无参构造
+     */
+    public ChildDepartment() {
+    }
+
+    public ChildDepartment(Integer childDepartmentId, String childDepartmentName, String childDepartmentNo, Integer isResendDepartment, Department departmentId) {
+        this.childDepartmentId = childDepartmentId;
+        this.childDepartmentName = childDepartmentName;
+        this.childDepartmentNo = childDepartmentNo;
+        this.isResendDepartment = isResendDepartment;
+        this.departmentId = departmentId;
+    }
+
     public Integer getChildDepartmentId() {
         return childDepartmentId;
     }

@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ablat.controller.LoginController">
+<mapper namespace="com.ablat.dao.EmployeeDao">
+
+    <resultMap id="employee" type="com.ablat.bean.Employee">
+        <id property="employeeId" column="employee_id"/>
+        <result property="employeeName" column="employee_name"/>
+        <result property="employeePassword" column="employee_password"/>
+        <result property="employeeNo" column="employee_no"/>
+        <result property="employeePhone" column="employee_phone"/>
+        <result property="employeeSex" column="employee_sex"/>
+        <result property="employeeAge" column="employee_age"/>
+        <result property="employeeQq" column="employee_qq"/>
+        <result property="employeeEmail" column="employee_email"/>
+        <result property="employeeStatus" column="employee_status"/>
+        <result property="employeeLive" column="employee_live"/>
+        <result property="childDepartmentId" column="child_department_id"/>
+    </resultMap>
+
+    <sql id="employeeColumns">
+        employee_id,employee_name,employee_password,employee_no,
+        employee_phone,employee_phone,employee_sex,employee_age,
+        employee_qq,employee_email,employee_status,employee_live,
+        child_department_id
+    </sql>
+
+    <!--查询所有员工-->
+    <select id="queryAllEmployees" resultMap="employee">
+        SELECT <include refid="employeeColumns"/> FROM t_employee
+    </select>
+
+
+
+
+    <!--添加员工-->
 </mapper>

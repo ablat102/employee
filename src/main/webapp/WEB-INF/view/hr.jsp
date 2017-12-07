@@ -13,10 +13,10 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
-    <link href="${path}/css/style.css" rel="stylesheet" type="text/css"/>
-    <script language="JavaScript" src="${path}/js/jquery.js"></script>
-    <script language="JavaScript" src="${path}/js/select.js"></script>
-    <script language="JavaScript" src="${path}/js/common.js"></script>
+    <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css"/>
+    <script language="JavaScript" src="${pageContext.request.contextPath}/js/jquery.js"></script>
+    <script language="JavaScript" src="${pageContext.request.contextPath}/js/select.js"></script>
+    <script language="JavaScript" src="${pageContext.request.contextPath}/js/common.js"></script>
     <title>人员管理</title>
     <script type="text/javascript">
 
@@ -39,12 +39,12 @@
     <div class="txtMarquee-left">
         <div class="bd">
             <ul class="infoList">
-                <li><a href="${path}/WEB-INF/view/notice_details.jsp">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
-                <li><a href="${path}/WEB-INF/view/notice_details.jsp">施强：高端专业语言教学</a><span>[11-11]</span></li>
-                <li><a href="${path}/WEB-INF/view/notice_details.jsp">新加坡留学，国际双语课程</a><span>[11-11]</span></li>
-                <li><a href="${path}/WEB-INF/view/notice_details.jsp">高考后留学日本名校随你选</a><span>[11-11]</span></li>
-                <li><a href="${path}/WEB-INF/view/notice_details.jsp">教育培训行业优势资源推介</a><span>[11-11]</span></li>
-                <li><a href="${path}/WEB-INF/view/notice_details.jsp">女友坚持警局完婚不抛弃</a><span>[11-11]</span></li>
+                <li><a href="${pageContext.request.contextPath}/notice_details.jsp">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+                <li><a href="${pageContext.request.contextPath}/notice_details.jsp">施强：高端专业语言教学</a><span>[11-11]</span></li>
+                <li><a href="${pageContext.request.contextPath}/notice_details.jsp">新加坡留学，国际双语课程</a><span>[11-11]</span></li>
+                <li><a href="${pageContext.request.contextPath}/notice_details.jsp">高考后留学日本名校随你选</a><span>[11-11]</span></li>
+                <li><a href="${pageContext.request.contextPath}/notice_details.jsp">教育培训行业优势资源推介</a><span>[11-11]</span></li>
+                <li><a href="${pageContext.request.contextPath}/notice_details.jsp">女友坚持警局完婚不抛弃</a><span>[11-11]</span></li>
             </ul>
         </div>
     </div>
@@ -204,7 +204,7 @@
 </div>
 </body>
 <!--公告滚动js-->
-<script type="text/javascript" src="../../js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.SuperSlide.2.1.1.js"></script>
 <script type="text/javascript">
     jQuery(".txtMarquee-left").slide({
         mainCell: ".bd ul",

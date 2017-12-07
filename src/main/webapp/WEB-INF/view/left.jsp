@@ -13,8 +13,8 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
-    <link href="${path}/css/style.css" rel="stylesheet" type="text/css"/>
-    <script language="JavaScript" src="${path}/js/jquery.js"></script>
+    <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css"/>
+    <script language="JavaScript" src="${pageContext.request.contextPath}/js/jquery.js"></script>
     <title>Title</title>
     <script type="text/javascript">
         $(function () {
@@ -46,9 +46,9 @@
 <div class="bgcover"></div>
 <dl class="leftmenu">
     <dd>
-        <a href="${path}/WEB-INF/view/notice.jsp" target="rightFrame">
+        <a href="${pageContext.request.contextPath}/notice" target="rightFrame">
             <div class="title ddactive">
-                <span><img src="${path}/images/i09.png" width="28px" height="28px"/></span>公告
+                <span><img src="${pageContext.request.contextPath}/images/i09.png" width="28px" height="28px"/></span>公告
                 <div style="clear:both;"></div>
             </div>
         </a>
@@ -56,20 +56,20 @@
     <dd>
         <div class="title">
                 <span>
-                    <img src="${path}/images/i06.png" width="28px"/>
+                    <img src="${pageContext.request.contextPath}/images/i06.png" width="28px"/>
                 </span>行政部
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
-            <li><cite></cite><a href="${path}/hr.html" target="rightFrame">招聘管理</a><i></i></li>
-            <li><cite></cite><a href="build_hr.html" target="rightFrame">新建员工</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/hr" target="rightFrame">招聘管理</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/build_hr" target="rightFrame">新建员工</a><i></i></li>
         </ul>
 
     </dd>
     <dd>
         <div class="title">
                 <span>
-                    <img src="../../images/icon02.png" width="28px"/>
+                    <img src="${pageContext.request.contextPath}/images/icon02.png" width="28px"/>
                 </span>设计部
             <div style="clear:both;"></div>
         </div>
@@ -80,7 +80,7 @@
     </dd>
     <dd>
         <div class="title">
-            <span><img src="../../images/i08.png" width="28px"/></span>商务部
+            <span><img src="${pageContext.request.contextPath}/images/i08.png" width="28px"/></span>商务部
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
@@ -91,7 +91,7 @@
     <dd>
         <div class="title">
                 <span>
-                    <img src="../../images/i04.png" width="28px"/>
+                    <img src="${pageContext.request.contextPath}/images/i04.png" width="28px"/>
                 </span>家具部
             <div style="clear:both;"></div>
         </div>
@@ -103,7 +103,7 @@
     <dd>
         <div class="title">
                 <span>
-                    <img src="../../images/icon05.png" width="28px"/>
+                    <img src="${pageContext.request.contextPath}/images/icon05.png" width="28px"/>
                 </span>系统管理
             <div style="clear:both;"></div>
         </div>
@@ -111,14 +111,14 @@
             <li><cite></cite><a href="sector.html" target="rightFrame">部门管理</a><i></i></li>
             <li><cite></cite><a href="person.html" target="rightFrame">人员管理</a><i></i></li>
             <li><cite></cite><a href="KPI.html" target="rightFrame">指标统计</a><i></i></li>
-            <li><cite></cite><a href="password.html" target="rightFrame">密码修改</a><i></i></li>
+            <li><cite></cite><a href="password" target="rightFrame">密码修改</a><i></i></li>
         </ul>
 
     </dd>
     <dd>
         <div class="title">
                 <span>
-                    <img src="../../images/c03.png" width="28px"/>
+                    <img src="${pageContext.request.contextPath}/images/c03.png" width="28px"/>
                 </span>公共库
             <div style="clear:both;"></div>
         </div>

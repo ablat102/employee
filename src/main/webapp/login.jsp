@@ -15,6 +15,7 @@
     <meta name="renderer" content="webkit">
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css"/>
     <script language="JavaScript" src="${pageContext.request.contextPath}/js/jquery.js"></script>
+    <script src="${pageContext.request.contextPath}/js/login.js"></script>
     <title>${pageContext.request.contextPath}</title>
     <style type="text/css">
         html {
@@ -139,9 +140,17 @@
                     src="${pageContext.request.contextPath}/images/login-line.png" alt=""
                     width="100%"></div>
             <div class="login-input" style="">
-                <div><label>用户名：</label><input type="text" placeholder="请输入用户名"></div>
-                <div><label>密&nbsp;&nbsp;&nbsp;码：</label><input type="password" placeholder="请输入密码"></div>
-                <div class="login-btn"><a href="${pageContext.request.contextPath}/WEB-INF/view/main.jsp">登陆</a><span class="forget">忘记密码?</span>
+                <div>
+                    <label>用户名：</label>
+                    <input type="text" placeholder="请输入用户名" name="empNo" id="empNo">
+                    <span id="errMsg">1</span>
+                </div>
+                <div>
+                    <label>密&nbsp;&nbsp;&nbsp;码：</label>
+                    <input type="password" placeholder="请输入密码" name="password" id="password">
+                    <span id="err">2</span>
+                </div>
+                <div class="login-btn"><a id="loginBtn">登陆</a><span class="forget">忘记密码?</span>
                 </div>
             </div>
         </div>
