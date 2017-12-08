@@ -30,7 +30,10 @@
         SELECT <include refid="employeeColumns"/> FROM t_employee
     </select>
 
-
+    <!--查询员工-->
+    <select id="queryEmployee" parameterType="string" resultMap="employee">
+      SELECT <include refid="employeeColumns"/> FROM t_employee WHERE employee_no = #{employeeNo}
+    </select>
 
 
     <!--添加员工-->

@@ -13,6 +13,7 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
+    <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css"/>
     <script language="JavaScript" src="${pageContext.request.contextPath}/js/jquery.js"></script>
     <script src="${pageContext.request.contextPath}/js/login.js"></script>
@@ -121,6 +122,30 @@
             color: #3b80d7;
         }
 
+        span {
+            display: inline;
+        }
+
+        .err {
+            width: 300px;
+            padding: 5px 10px;
+            margin: 10px 103px;
+            border: 1px solid red;
+            display: none;
+            border-radius: 5px;
+        }
+
+        .err .glyphicon {
+            font-size: 14px;
+            color: red;
+        }
+
+        .err #errMsg1, #errMsg2 {
+            color: red;
+            font-size: 14px;
+            padding-left: 10px;
+        }
+
     </style>
     <script type="text/javascript">
         $(function () {
@@ -141,14 +166,20 @@
                     width="100%"></div>
             <div class="login-input" style="">
                 <div>
+                    <div class="err" id="err1"><span class="glyphicon glyphicon-remove-circle"></span><span
+                            id="errMsg1"></span>
+                    </div>
                     <label>用户名：</label>
                     <input type="text" placeholder="请输入用户名" name="empNo" id="empNo">
-                    <span id="errMsg">1</span>
+
                 </div>
                 <div>
+                    <div class="err" id="err2"><span class="glyphicon glyphicon-remove-circle"></span><span
+                            id="errMsg2"></span>
+                    </div>
                     <label>密&nbsp;&nbsp;&nbsp;码：</label>
                     <input type="password" placeholder="请输入密码" name="password" id="password">
-                    <span id="err">2</span>
+
                 </div>
                 <div class="login-btn"><a id="loginBtn">登陆</a><span class="forget">忘记密码?</span>
                 </div>

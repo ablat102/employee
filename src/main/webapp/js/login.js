@@ -3,7 +3,7 @@
  * */
 $(function () {
     //登录按钮
-    var loginBtn =$("#loginBtn");
+    var loginBtn = $("#loginBtn");
     //用户名输入框
     var userNo = $('#empNo');
     //密码输入框
@@ -12,23 +12,27 @@ $(function () {
     //验证用户名
     function validateEmpNo() {
         if (userNo.val() != "") {
+            $('#err1').hide();
             return true;
-        }else {
-            userNo.css('border','1px solid red');
+        } else {
+            $('#err1').show();
+            $('#errMsg1').text("用户名不能为空");
             return false;
         }
     }
-    
+
     //验证密码
     function validatePassword() {
         if (password.val() != "") {
+            $('#err1').hide();
             return true;
-        }else {
-            password.css('border','1px solid red');
+        } else {
+            $('#err1').show();
+            $('#errMsg1').text("密码不能为空");
             return false;
         }
     }
-    
+
     //整体验证
     function validate() {
         return validateEmpNo() && validatePassword();
@@ -39,13 +43,39 @@ $(function () {
     });
 
     password.blur(function () {
-       validatePassword();
+        validatePassword();
     });
 
+    userNo.focus(function () {
+        $('#err1').hide();
+    });
 
+    password.focus(function () {
+        $('#err1').hide();
+    });
     loginBtn.click(function () {
         if (validate()) {
-
+            $.ajax({
+                url: "login",
+                type: "post",
+                dataType: "text",
+                data: {
+                    "userValue": $('#empNo').val(),
+                    "password": $('#password').val()
+                },
+                success: function (data) {
+                    if (data == 1) {
+                        alert("成功了");
+                        console.log("成功了");
+                    }
+                    else {
+                        alert("账号或者密码错误");
+                    }
+                },
+                error: function (e) {
+                    alert("失败了");
+                }
+            });
         }
     });
 })

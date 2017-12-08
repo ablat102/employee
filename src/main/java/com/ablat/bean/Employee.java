@@ -41,7 +41,12 @@ public class Employee {
     /**
      * 无参构造方法
      */
+
     public Employee() {
+    }
+
+    public Employee(String employeeNo) {
+        this.employeeNo = employeeNo;
     }
 
     /**
@@ -60,7 +65,7 @@ public class Employee {
      * @param employeeStatus
      * @param employeeLive
      */
-    public Employee(Integer employeeId, String employeeName, String employeePassword, String employeeNo, String employeePhone, Integer employeeSex, Integer employeeAge, String employeeQq, Date employeeBrithday, Integer employeeEmail, Integer employeeStatus, Integer employeeLive,Integer childDepartmentId) {
+    public Employee(Integer employeeId, String employeeName, String employeePassword, String employeeNo, String employeePhone, Integer employeeSex, Integer employeeAge, String employeeQq, Date employeeBrithday, Integer employeeEmail, Integer employeeStatus, Integer employeeLive, Integer childDepartmentId) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.employeePassword = employeePassword;
