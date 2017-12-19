@@ -160,17 +160,10 @@
     <img src="${pageContext.request.contextPath}/images/ltop.png" alt="" class="line">
     <div>
         <div class="login" style=" ">
-            <div class="logo">
-                <%--<img src="${pageContext.request.contextPath}/images/login-logo.png" width="100%">--%>
-                <h1>丁丁添金</h1>
-            </div>
-            <div style=" width: 7px;  margin: 50px 40px;float: left;">
-                <%--LOGO--%>
-                <img
-                        src="${pageContext.request.contextPath}/images/login-line.png" alt=""
-                        width="100%">
-
-            </div>
+            <div class="logo"><img src="${pageContext.request.contextPath}/images/login-logo.png" width="100%"></div>
+            <div style=" width: 7px;  margin: 50px 40px;float: left;"><img
+                    src="${pageContext.request.contextPath}/images/login-line.png" alt=""
+                    width="100%"></div>
             <div class="login-input" style="">
                 <div>
                     <div class="err" id="err1"><span class="glyphicon glyphicon-remove-circle"></span><span

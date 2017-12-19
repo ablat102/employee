@@ -14,7 +14,7 @@
        http://www.springframework.org/schema/tx/spring-tx.xsd">
     <!--开启注解-->
     <context:annotation-config/>
-    <context:component-scan base-package="com.ablat">
+    <context:component-scan base-package="com.machine">
         <!--除了控制器之外的都要扫描-->
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 
@@ -39,7 +39,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <!--配置MyBatis映射文件的位置-->
-        <property name="mapperLocations" value="classpath:com.ablat.mapper/*.xml"/>
+        <property name="mapperLocations" value="classpath:com.machine.mapper/*.xml"/>
     </bean>
     <!--批量插入-->
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
@@ -48,7 +48,7 @@
     </bean>
     <!--配置扫描器，将MyBatis接口的实现加入到springIoC容器中-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.ablat.dao"/>
+        <property name="basePackage" value="com.machine.dao"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
@@ -60,7 +60,7 @@
     <!--开启基于注解的事务，使用XML配置形式的事务-->
     <aop:config>
         <!--切入点表达式-->
-        <aop:pointcut id="txPoint" expression="execution(* com.ablat.service..*())"/>
+        <aop:pointcut id="txPoint" expression="execution(* com.machine.service..*())"/>
         <!--配置事务增强-->
         <aop:advisor advice-ref="teAdvice" pointcut-ref="txPoint"/>
     </aop:config>

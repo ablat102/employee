@@ -17,7 +17,7 @@
     <!--开启注解-->
     <context:annotation-config/>
     <!--扫描注解-->
-    <context:component-scan base-package="com.ablat" use-default-filters="false">
+    <context:component-scan base-package="com.machine" use-default-filters="false">
         <!--只让他扫描控制器注解-->
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
