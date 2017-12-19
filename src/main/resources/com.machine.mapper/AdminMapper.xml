@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--管理员MyBatis映射文件-->
+
 <mapper namespace="com.machine.dao.IAdminDao">
+
+    <resultMap id="admin" type="com.machine.bean.Admin">
+        <id property="adminId" column="admin_id"/>
+        <result property="adminName" column="admin_name"/>
+        <result property="adminPassword" column="admin_password"/>
+        <result property="adminWechatId" column="admin_wechat_id"/>
+        <result property="adminPhone" column="admin_phone"/>
+        <result property="adminRole" column="admin_role"/>
+    </resultMap>
+<!--通过用户名称，密码，管理员类型来查询-->
+    <select id="queryAdminByNameAndByPass" resultType="com.machine.bean.Admin" parameterType="map">
+      SELECT admin_id,admin_name,admin_password,admin_wechat_id,admin_phone,admin_role FROM admin
+      WHERE admin_name = #{adminName} AND admin_password = #{adminPassword} AND admin_role = #{adminRole}
+     </select>
+
+
+     <!--添加维护管理员-->
+    <insert id="addAdmin" parameterType="com.machine.bean.Admin">
+        INSERT INTO admin(admin_id, admin_name, admin_password, admin_wechat_id, admin_phone, admin_role)
+         VALUES (NULL ,#{adminName},#{adminPassword},#{adminWechatId},#{adminPhone},#{adminRole})
+    </insert>
+
+    <!--删除管理员-->
+
+    <delete id="deleteAdmin" parameterType="com.machine.bean.Admin">
+      DELETE FROM admin WHERE admin_name = #{adminName}
+    </delete>
+
 </mapper>

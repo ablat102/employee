@@ -18,7 +18,7 @@ public class Admin {
     //管理员手机号
     private String adminPhone;
     //管理员权限
-    private String adminRole;
+    private Integer adminRole;
 
     public Admin() {
     }
@@ -63,11 +63,11 @@ public class Admin {
         this.adminPhone = adminPhone;
     }
 
-    public String getAdminRole() {
+    public Integer getAdminRole() {
         return adminRole;
     }
 
-    public void setAdminRole(String adminRole) {
+    public void setAdminRole(Integer adminRole) {
         this.adminRole = adminRole;
     }
 }

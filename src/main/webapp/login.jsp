@@ -13,11 +13,11 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
-    <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css"/>
-    <script language="JavaScript" src="${pageContext.request.contextPath}/js/jquery.js"></script>
-    <script src="${pageContext.request.contextPath}/js/login.js"></script>
-    <title>${pageContext.request.contextPath}</title>
+    <link href="${pageContext.request.contextPath}/res/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/res/css/style.css" rel="stylesheet" type="text/css"/>
+    <script language="JavaScript" src="${pageContext.request.contextPath}/res/js/jquery.js"></script>
+    <script src="${pageContext.request.contextPath}/res/js/login.js"></script>
+    <title>丁丁添金--管理员登录</title>
     <style type="text/css">
         html {
             height: 100%;
@@ -27,10 +27,10 @@
         body {
             height: 100%;
             margin: 0;
-            background: url(${pageContext.request.contextPath}/images/loginbg.jpg) center no-repeat;
+            background: url(${pageContext.request.contextPath}/res/images/loginbg.jpg) center no-repeat;
             background-size: cover;
-            -ms-behavior: url(${pageContext.request.contextPath}/css/backgroundsize.min.htc);
-            behavior: url(${pageContext.request.contextPath}/css/backgroundsize.min.htc);
+            -ms-behavior: url(${pageContext.request.contextPath}/res/css/backgroundsize.min.htc);
+            behavior: url(${pageContext.request.contextPath}/res/css/backgroundsize.min.htc);
         }
 
         .login-main {
@@ -147,17 +147,10 @@
         }
 
     </style>
-    <script type="text/javascript">
-        $(function () {
-            $(".forget").click(function () {
-                alert("请联系管理员")
-            });
-        });
-    </script>
 </head>
 <body>
 <div class="login-main" style="">
-    <img src="${pageContext.request.contextPath}/images/ltop.png" alt="" class="line">
+    <img src="${pageContext.request.contextPath}/res/images/ltop.png" alt="" class="line">
     <div>
         <div class="login" style=" ">
             <div class="logo">
@@ -167,7 +160,7 @@
             <div style=" width: 7px;  margin: 50px 40px;float: left;">
                 <%--LOGO--%>
                 <img
-                        src="${pageContext.request.contextPath}/images/login-line.png" alt=""
+                        src="${pageContext.request.contextPath}/res/images/login-line.png" alt=""
                         width="100%">
 
             </div>
@@ -193,7 +186,7 @@
             </div>
         </div>
     </div>
-    <img src="${pageContext.request.contextPath}/images/ldown.png" alt="" class="line">
+    <img src="${pageContext.request.contextPath}/res/images/ldown.png" alt="" class="line">
 </div>
 </body>
 </html>
