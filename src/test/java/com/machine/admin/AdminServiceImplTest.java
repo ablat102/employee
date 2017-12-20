@@ -42,9 +42,10 @@ public class AdminServiceImplTest {
     @Test
     public void testLogin() throws Exception {
         admin.setAdminName("张三");
-        admin.setAdminPassword("123");
-        admin.setAdminRole(2);
-        adminService.login(admin.getAdminName(),admin.getAdminPassword(),admin.getAdminRole());
+        admin.setAdminPassword("1");
+        admin.setAdminRole(1);
+        Object login = adminService.login(admin.getAdminName(), admin.getAdminPassword(), admin.getAdminRole());
+        System.out.println(login);
     }
 
     /**
@@ -55,7 +56,15 @@ public class AdminServiceImplTest {
         admin.setAdminName("张三");
         admin.setAdminPassword("1234");
         admin.setAdminPhone("18009293793");
+        admin.setAdminRole(1);
         adminService.addAdmin(admin);
+    }
+
+    @Test
+    public void testCheckName() throws Exception {
+        Admin admin = adminService.checkName("张三");
+        System.out.println(admin);
+
     }
 
 

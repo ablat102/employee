@@ -27,13 +27,34 @@ public class AdminServiceImpl implements IAdminService {
     @Override
     public Object login(String adminName, String adminPassword, Integer adminRole) {
         Admin admin = adminDao.queryAdminByNameAndByPass(adminName, adminPassword, adminRole);
-        if (admin != null) {
-            return admin;
+        if (admin.getAdminId() != null) {
+            return "成功了";
+        } else {
+            return "出错了";
         }
+
+    }
+
+    @Override
+    public Admin checkName(String adminName) {
+        Admin admin = adminDao.queryAdminByName(adminName);
+        return admin;
+    }
+
+    @Override
+    public Admin checkPassword(String adminPassword) {
+        Admin admin = adminDao.queryAdminByPassword(adminPassword);
+        return admin;
+    }
+
+    @Override
+    public Admin checkRole(Integer adminRole) {
         return null;
     }
 
     @Override
     public void addAdmin(Admin admin) {
+
+        adminDao.addAdmin(admin);
     }
 }

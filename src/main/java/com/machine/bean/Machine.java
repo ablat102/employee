@@ -23,8 +23,6 @@ public class Machine {
     private Integer machineCapacity;
     //机器提示，从硬件获取
     private String machineWarning;
-    //机器拍的物品照片
-    private String productPhoto;
     //机器放置时间
     private Date createTime;
 
@@ -85,14 +83,6 @@ public class Machine {
 
     public void setMachineWarning(String machineWarning) {
         this.machineWarning = machineWarning;
-    }
-
-    public String getProductPhoto() {
-        return productPhoto;
-    }
-
-    public void setProductPhoto(String productPhoto) {
-        this.productPhoto = productPhoto;
     }
 
     public Date getCreateTime() {

@@ -17,7 +17,28 @@ public interface IAdminDao {
      *
      * @return
      */
-    public Admin queryAdminByNameAndByPass(@Param("adminName") String adminName, @Param("adminPassword") String adminPassword,@Param("adminRole") Integer adminRole);
+    public Admin queryAdminByNameAndByPass(@Param("adminName") String adminName, @Param("adminPassword") String adminPassword, @Param("adminRole") Integer adminRole);
+
+    /**
+     *通过管理员名称查询管理员
+     * @param adminName
+     * @return 管理员对象
+     */
+    public Admin queryAdminByName(String adminName);
+
+    /**
+     * 通过管理员密码查询管理员
+     * @param adminPassword 管理员密码
+     * @return 管理员对象
+     */
+    public Admin queryAdminByPassword(String adminPassword);
+
+    /**
+     * 通过管理员权限查询管理员
+     * @param adminRole 管理员权限
+     * @return 管理员对象
+     */
+    public Admin queryAdminByRole(Integer adminRole);
 
     /**
      * 添加普通管理员

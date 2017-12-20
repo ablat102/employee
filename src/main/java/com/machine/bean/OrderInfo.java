@@ -18,8 +18,29 @@ public class OrderInfo {
     private Integer productId;
     //创建时间
     private Date createTime;
+    //机器编号
+    private Integer machineId;
+    //机器拍照的照片
+    private String productPhoto;
 
+    //无参构造
     public OrderInfo() {
+    }
+
+    public Integer getMachineId() {
+        return machineId;
+    }
+
+    public void setMachineId(Integer machineId) {
+        this.machineId = machineId;
+    }
+
+    public String getProductPhoto() {
+        return productPhoto;
+    }
+
+    public void setProductPhoto(String productPhoto) {
+        this.productPhoto = productPhoto;
     }
 
     public Integer getOrderInfoId() {

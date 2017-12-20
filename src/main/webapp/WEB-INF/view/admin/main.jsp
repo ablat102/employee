@@ -16,10 +16,9 @@
     <title>Title</title>
 </head>
 <frameset rows="90,*" cols="*" frameborder="no" border="0" framespacing="0">
-    <frame src="${pageContext.request.contextPath}/top" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame"/>
+    <frame src="${pageContext.request.contextPath}/admin/top" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame"/>
     <frameset cols="187,*" frameborder="no" border="0" framespacing="0">
-        <frame src="${pageContext.request.contextPath}/left" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame"/>
-        <frame src="${pageContext.request.contextPath}/notice" name="rightFrame" id="rightFrame" title="rightFrame"/>
+        <frame src="${pageContext.request.contextPath}/admin/left" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame"/>
     </frameset>
 </frameset>
 <noframes>

@@ -170,7 +170,7 @@
                             id="errMsg1"></span>
                     </div>
                     <label>用户名：</label>
-                    <input type="text" placeholder="请输入管理员用户名" name="adminNo" id="empNo">
+                    <input type="text" placeholder="请输入用户名" name="empNo" id="empNo">
 
                 </div>
                 <div>
@@ -178,7 +178,7 @@
                             id="errMsg2"></span>
                     </div>
                     <label>密&nbsp;&nbsp;&nbsp;码：</label>
-                    <input type="password" placeholder="请输入管理员密码" name="password" id="password">
+                    <input type="password" placeholder="请输入密码" name="password" id="password">
 
                 </div>
                 <div class="login-btn"><a id="loginBtn">登陆</a><span class="forget">忘记密码?</span>

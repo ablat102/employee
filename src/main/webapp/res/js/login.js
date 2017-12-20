@@ -56,24 +56,23 @@ $(function () {
     loginBtn.click(function () {
         if (validate()) {
             $.ajax({
-                url: "login",
+                url: "admin/login",
                 type: "post",
                 dataType: "text",
                 data: {
-                    "userValue": $('#empNo').val(),
+                    "adminValue": $('#empNo').val(),
                     "password": $('#password').val()
                 },
                 success: function (data) {
-                    if (data == 1) {
-                        alert("成功了");
-                        console.log("成功了");
+                    if (data != null) {
+                        window.location.href = "admin/main/";
                     }
                     else {
-                        alert("账号或者密码错误");
+                        alert("账号或者密码不能为空");
                     }
                 },
                 error: function (e) {
-                    alert("失败了");
+                    alert("失败了" + e);
                 }
             });
         }
