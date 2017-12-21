@@ -98,8 +98,9 @@
         $.ajax({
             url : 'changeUser',
             type : 'post',
+            date : ,
             success : function () {
-                alert();
+                alert("成功了");
             },
             error : function (e) {
                 alert(e);

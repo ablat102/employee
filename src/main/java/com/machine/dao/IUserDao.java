@@ -15,5 +15,5 @@ public interface IUserDao {
      */
     public List<User> queryAllUsers();
 
-
+    public int updateUserStatus(User user);
 }

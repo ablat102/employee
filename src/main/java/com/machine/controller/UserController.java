@@ -38,7 +38,8 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/changeUser",method = RequestMethod.POST)
-    public String addUser() {
+    public String changeUser() {
+
         return "changeUser";
     }
 

@@ -24,4 +24,12 @@
     <select id="queryAllUsers" resultMap="user">
         SELECT <include refid="userColumns"/> FROM user
     </select>
+
+    <update id="updateUserStatus" parameterType="com.machine.bean.User">
+        UPDATE user SET user_is_used =
+        <if test="userIsUsed == 0">
+            1
+        </if>
+         WHERE user_id #{userId}
+    </update>
 </mapper>
