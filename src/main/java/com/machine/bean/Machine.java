@@ -25,8 +25,18 @@ public class Machine {
     private String machineWarning;
     //机器放置时间
     private Date createTime;
+    //用户ID
+    private Integer userId;
 
     public Machine() {
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public Integer getMachineId() {

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 管理员业务处理实现类
@@ -35,26 +36,69 @@ public class AdminServiceImpl implements IAdminService {
 
     }
 
+    /**
+     * 是否该管理员存在
+     *
+     * @param adminName 管理员名
+     * @return 是否存在
+     */
     @Override
-    public Admin checkName(String adminName) {
-        Admin admin = adminDao.queryAdminByName(adminName);
-        return admin;
+    public boolean checkName(String adminName) {
+        if (adminDao.queryAdminByName(adminName) > 0) {
+            return true;
+        }
+        return false;
+
     }
 
+    /**
+     * 密码是否正确
+     *
+     * @param adminPassword 管理员密码
+     * @return
+     */
     @Override
-    public Admin checkPassword(String adminPassword) {
-        Admin admin = adminDao.queryAdminByPassword(adminPassword);
-        return admin;
+    public boolean checkPassword(String adminPassword) {
+        if (adminDao.queryAdminByPassword(adminPassword) > 0) {
+            return true;
+        }
+        return false;
     }
 
+    /**
+     * 是否超级管理员
+     *
+     * @return 是否存在
+     */
     @Override
-    public Admin checkRole(Integer adminRole) {
+    public boolean checkRole(String adminName) {
+        if (adminDao.queryAdminByRole(adminName) > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     *
+     * @param admin
+     */
+    @Override
+    public void addAdmin(Admin admin) {
+        adminDao.addAdmin(admin);
+    }
+
+    /**
+     * 查询词所有管理员
+     * @return
+     */
+    @Override
+    public List<Admin> allAdmins() {
+        List<Admin> admins = adminDao.queryAllAdmins();
+        if (admins != null) {
+            return admins;
+        }
         return null;
     }
 
-    @Override
-    public void addAdmin(Admin admin) {
 
-        adminDao.addAdmin(admin);
-    }
 }

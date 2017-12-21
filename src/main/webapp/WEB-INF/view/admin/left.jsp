@@ -53,9 +53,10 @@
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
-            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/hr" target="rightFrame">管理员</a><i></i>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/adminList"
+                                target="rightFrame">管理员列表</a><i></i>
             </li>
-            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/build_hr"
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/addAdmin"
                                 target="rightFrame">添加管理员</a><i></i></li>
         </ul>
 
@@ -68,8 +69,8 @@
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
-            <li><cite></cite><a href="partners.html" target="rightFrame">用户</a><i></i></li>
-            <li><cite></cite><a href="partners.html" target="rightFrame">合作伙伴</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/userList" target="rightFrame">用户列表</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/changeUser" target="rightFrame">用户管理</a><i></i></li>
         </ul>
     </dd>
     <dd>
@@ -78,8 +79,8 @@
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
-            <li><cite></cite><a href="empty.html" target="rightFrame">客户</a><i></i></li>
-            <li><cite></cite><a href="partners.html" target="rightFrame">合作伙伴</a><i></i></li>
+            <li><cite></cite><a href="empty.html" target="rightFrame">机器列表</a><i></i></li>
+            <li><cite></cite><a href="partners.html" target="rightFrame">机器管理</a><i></i></li>
         </ul>
     </dd>
     <dd>
@@ -90,8 +91,8 @@
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
-            <li><cite></cite><a href="partners.html" target="rightFrame">客户</a><i></i></li>
-            <li><cite></cite><a href="partners.html" target="rightFrame">合作伙伴</a><i></i></li>
+            <li><cite></cite><a href="partners.html" target="rightFrame">物品列表</a><i></i></li>
+            <li><cite></cite><a href="partners.html" target="rightFrame">物品管理</a><i></i></li>
         </ul>
     </dd>
     <dd>
@@ -102,10 +103,10 @@
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
-            <li><cite></cite><a href="sector.html" target="rightFrame">部门管理</a><i></i></li>
-            <li><cite></cite><a href="person.html" target="rightFrame">人员管理</a><i></i></li>
-            <li><cite></cite><a href="KPI.html" target="rightFrame"></a><i>1</i></li>
-            <li><cite></cite><a href="password" target="rightFrame"></a><i>2</i></li>
+            <li><cite></cite><a href="sector.html" target="rightFrame">系统管理</a><i></i></li>
+            <li><cite></cite><a href="person.html" target="rightFrame">系统管理</a><i></i></li>
+            <li><cite></cite><a href="KPI.html" target="rightFrame">其他</a><i></i></li>
+            <li><cite></cite><a href="password" target="rightFrame">其他</a><i></i></li>
         </ul>
 
     </dd>
@@ -117,8 +118,8 @@
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
-            <li><cite></cite><a href="turn.html" target="rightFrame">客户</a><i></i></li>
-            <li><cite></cite><a href="turn.html" target="rightFrame">合作伙伴</a><i></i></li>
+            <li><cite></cite><a href="turn.html" target="rightFrame">日志列表</a><i></i></li>
+            <li><cite></cite><a href="turn.html" target="rightFrame">日志管理</a><i></i></li>
         </ul>
 
     </dd>

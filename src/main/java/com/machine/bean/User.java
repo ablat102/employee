@@ -22,6 +22,21 @@ public class User {
     private Double userMony;
     //用户创建时间
     private Date createTime;
+    //用户名称
+    private String userName;
+    //用户支付宝账号
+    private String userAlipayId;
+
+    public User() {
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public String getUserAlipayId() {
         return userAlipayId;
@@ -31,11 +46,7 @@ public class User {
         this.userAlipayId = userAlipayId;
     }
 
-    //用户支付宝账号
-    private String userAlipayId;
 
-    public User() {
-    }
 
     public Integer getUserId() {
         return userId;

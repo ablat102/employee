@@ -18,6 +18,11 @@
     <sql id="adminColumns">
         admin_id,admin_name,admin_password,admin_wechat_id,admin_phone,admin_role
     </sql>
+<!--查询所有员工信息-->
+    <select id="queryAllAdmins" resultMap="admin">
+      SELECT <include refid="adminColumns"/> FROM admin
+    </select>
+
 
 <!--通过用户名称，密码，管理员类型来查询-->
     <select id="queryAdminByNameAndByPass" resultType="com.machine.bean.Admin" parameterType="map">
@@ -25,16 +30,16 @@
       WHERE admin_name = #{adminName} AND admin_password = #{adminPassword} AND admin_role = #{adminRole}
      </select>
     <!--通过管理员名查询-->
-    <select id="queryAdminByName" resultType="com.machine.bean.Admin" parameterType="string">
-        SELECT <include refid="adminColumns"/> FROM admin WHERE admin_name = #{adminName}
+    <select id="queryAdminByName" resultType="int" parameterType="string">
+        SELECT count(1) FROM admin WHERE admin_name = #{adminName}
     </select>
     <!--通过密码查询-->
-    <select id="queryAdminByPassword" parameterType="string" resultType="com.machine.bean.Admin">
-        SELECT <include refid="adminColumns"/> FROM admin WHERE admin_password = #{adminPassword}
+    <select id="queryAdminByPassword" parameterType="string" resultType="int">
+        SELECT count(1) FROM admin WHERE admin_password = #{adminPassword}
     </select>
-    <!--通过权限查询-->
-    <select id="queryAdminByRole" resultType="com.machine.bean.Admin" parameterType="string">
-        SELECT <include refid="adminColumns"/> FROM admin WHERE admin_role = ${adminRole}
+    <!--通过权限查询，是否后台管理员-->
+    <select id="queryAdminByRole" resultType="int" parameterType="string">
+        SELECT count(1) FROM admin WHERE admin_name = #{adminName} AND admin_role = 0
     </select>
      <!--添加维护管理员-->
     <insert id="addAdmin" parameterType="com.machine.bean.Admin">
@@ -45,7 +50,7 @@
     <!--删除管理员-->
 
     <delete id="deleteAdmin" parameterType="com.machine.bean.Admin">
-      DELETE FROM admin WHERE admin_name = #{adminName}
+      DELETE FROM admin WHERE admin_id = #{adminId}
     </delete>
 
 </mapper>

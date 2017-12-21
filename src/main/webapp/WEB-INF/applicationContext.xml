@@ -40,7 +40,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <!--配置MyBatis映射文件的位置-->
-        <property name="mapperLocations" value="classpath:com.machine.mapper/AdminMapper.xml"/>
+        <property name="mapperLocations" value="classpath:com.machine.mapper/*.xml"/>
     </bean>
     <!--批量插入-->
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">

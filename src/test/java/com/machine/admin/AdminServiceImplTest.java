@@ -1,7 +1,9 @@
 package com.machine.admin;
 
 import com.machine.bean.Admin;
+import com.machine.dao.IAdminDao;
 import com.machine.service.IAdminService;
+import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
@@ -11,6 +13,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * AdminServiceImpl Tester.
@@ -27,6 +30,8 @@ public class AdminServiceImplTest {
     private IAdminService adminService;
     @Autowired
     private Admin admin;
+    @Autowired
+    private IAdminDao adminDao;
 
     @Before
     public void before() throws Exception {
@@ -48,6 +53,13 @@ public class AdminServiceImplTest {
         System.out.println(login);
     }
 
+
+    @Test
+    public void testAdminRole() {
+
+    }
+
+
     /**
      * Method: addAdmin(Admin admin)
      */
@@ -62,10 +74,26 @@ public class AdminServiceImplTest {
 
     @Test
     public void testCheckName() throws Exception {
-        Admin admin = adminService.checkName("张三");
-        System.out.println(admin);
+        boolean flag = adminService.checkName("张");
+        System.out.println(flag);
 
     }
 
+    //测试权限
+    @Test
+    public void testCheckRole() {
+
+    }
+
+    @Test
+    public void testAllAdmins() throws Exception {
+        List<Admin> admins = adminService.allAdmins();
+        if (admins != null) {
+            System.out.println(adminService.allAdmins().size());
+            for (int i = 0; i < admins.size(); i++) {
+                System.out.println(admins.get(i).getAdminName());
+            }
+        }
+    }
 
 } 

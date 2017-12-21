@@ -13,12 +13,13 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
-    <title>Title</title>
+    <title>后台首页</title>
 </head>
 <frameset rows="90,*" cols="*" frameborder="no" border="0" framespacing="0">
     <frame src="${pageContext.request.contextPath}/admin/top" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame"/>
     <frameset cols="187,*" frameborder="no" border="0" framespacing="0">
         <frame src="${pageContext.request.contextPath}/admin/left" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame"/>
+        <frame src="${pageContext.request.contextPath}/admin/adminList" name="rightFrame" id="rightFrame" title="rightFrame" />
     </frameset>
 </frameset>
 <noframes>

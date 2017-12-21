@@ -10,21 +10,22 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 
 @Controller(value = "mainController")
-@RequestMapping(value = "/admin/")
+@RequestMapping(value = "/admin")
 public class MainController {
 
-    @RequestMapping(value = "/main")
+    @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String main() {
         return "main";
     }
 
-    @RequestMapping("/top")
+    @RequestMapping(value = "/top", method = RequestMethod.GET)
     public String top() {
         return "top";
     }
 
-    @RequestMapping("/left")
+    @RequestMapping(value = "/left", method = RequestMethod.GET)
     public String left() {
         return "left";
     }
+
 }

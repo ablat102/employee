@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,11 +51,12 @@
 </head>
 <body style=" width: 100%; height:90px;background-image: url('${pageContext.request.contextPath}/res/images/bg.png');background-size: cover;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=${pageContext.request.contextPath}/'res/images/bg.png',sizingMethod='scale'); ">
 <div class="bgcover"></div>
-<div style="" class="user">admin，欢迎登陆</div>
+<div style="" class="user">${sessionScope.get("adminName")}，欢迎登陆</div>
 <div style="margin: 28px auto; width: 500px;">
     <%--<img src="${pageContext.request.contextPath}/res/images/logo.png"/>--%>
 </div>
-<a class="quit" href="${pageContext.request.contextPath}/admin/login" target="_blank">退&nbsp;&nbsp;出</a>
+<%--这里有退出按钮，暂未做--%>
+<%--<a class="quit" href="${pageContext.request.contextPath}/admin/logout">退&nbsp;&nbsp;出</a>--%>
 <div style="clear: both"></div>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--用户映射文件-->
+
+<mapper namespace="com.machine.dao.IUserDao">
+
+    <resultMap id="user" type="com.machine.bean.User">
+        <id column="user_id" property="userId"/>
+        <result column="user_wechat_id" property="userWechatId"/>
+        <result column="user_phone" property="userPhone"/>
+        <result column="user_is_used" property="userIsUsed"/>
+        <result column="user_mony" property="userMony"/>
+        <result column="create_time" property="createTime"/>
+        <result column="user_alipay_id" property="userAlipayId"/>
+        <result column="user_name" property="userName"/>
+    </resultMap>
+
+    <sql id="userColumns">
+        user_id,user_wechat_id,user_phone,user_is_used,user_mony,create_time,user_alipay_id,user_name
+    </sql>
+
+    <select id="queryAllUsers" resultMap="user">
+        SELECT <include refid="userColumns"/> FROM user
+    </select>
+</mapper>
