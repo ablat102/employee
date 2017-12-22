@@ -49,7 +49,7 @@ public class UserServiceImplTest {
      */
 
     @Test
-    public void testAllAdmins() throws Exception {
+    public void testAllUsers() throws Exception {
         List<User> users = userService.userList();
         if (users != null) {
             System.out.println(userService.userList().size());
@@ -58,6 +58,19 @@ public class UserServiceImplTest {
                 System.out.println(users.get(i));
             }
         }
+    }
+
+    @Test
+    public void testUpdateUserStatus() throws Exception {
+        user.setUserId(3);
+        boolean flag = userService.updateUserStatus(user);
+    }
+
+    @Test
+    public void testQueryUserStatus() throws Exception {
+        user.setUserId(1);
+        int i = userDao.queryUserStatus(user);
+        System.out.println(i);
     }
 
 } 

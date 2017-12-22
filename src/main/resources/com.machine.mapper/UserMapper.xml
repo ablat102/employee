@@ -20,16 +20,22 @@
     <sql id="userColumns">
         user_id,user_wechat_id,user_phone,user_is_used,user_mony,create_time,user_alipay_id,user_name
     </sql>
-
+    <!--查询所有用户-->
     <select id="queryAllUsers" resultMap="user">
-        SELECT <include refid="userColumns"/> FROM user
+        SELECT
+        <include refid="userColumns"/>
+        FROM user
     </select>
 
+    <!--查询用户状态-->
+    <select id="queryUserStatus" parameterType="com.machine.bean.User" resultMap="user">
+      SELECT user_is_used FROM user WHERE user_id = #{userId}
+    </select>
+
+    <!--修改用户状态-->
     <update id="updateUserStatus" parameterType="com.machine.bean.User">
-        UPDATE user SET user_is_used =
-        <if test="userIsUsed == 0">
-            1
-        </if>
-         WHERE user_id #{userId}
+        UPDATE user
+        SET user_status_id = #{userIsUsed}
+        WHERE user_id = #{userId}
     </update>
 </mapper>

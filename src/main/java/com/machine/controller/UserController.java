@@ -37,7 +37,7 @@ public class UserController {
      * 修改用户信息
      * @return
      */
-    @RequestMapping(value = "/changeUser",method = RequestMethod.POST)
+    @RequestMapping(value = "/changeUser")
     public String changeUser() {
 
         return "changeUser";

@@ -15,5 +15,13 @@ public interface IUserDao {
      */
     public List<User> queryAllUsers();
 
+    /**
+     * 修改用户状态
+     * @param user
+     * @return
+     */
     public int updateUserStatus(User user);
+
+
+    public int queryUserStatus(User user);
 }

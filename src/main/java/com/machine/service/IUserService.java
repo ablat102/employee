@@ -14,4 +14,6 @@ public interface IUserService {
      * @return
      */
     public List<User> userList();
+
+    public boolean updateUserStatus(User user);
 }

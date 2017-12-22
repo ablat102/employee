@@ -79,8 +79,8 @@
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
-            <li><cite></cite><a href="empty.html" target="rightFrame">机器列表</a><i></i></li>
-            <li><cite></cite><a href="partners.html" target="rightFrame">机器管理</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/machineList" target="rightFrame">机器列表</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/changeMachine" target="rightFrame">机器管理</a><i></i></li>
         </ul>
     </dd>
     <dd>

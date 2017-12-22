@@ -28,4 +28,19 @@ public class UserServiceImpl implements IUserService {
         }
         return null;
     }
+
+    @Override
+    public boolean updateUserStatus(User user) {
+        int userStatusId = userDao.queryUserStatus(user);
+
+        if (userStatusId == 0) {
+            user.setUserIsUsed(1);
+            userDao.updateUserStatus(user);
+        }else {
+            user.setUserIsUsed(0);
+            userDao.updateUserStatus(user);
+        }
+        
+        return true;
+    }
 }

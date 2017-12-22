@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--机器DAO映射文件-->
+
+<mapper namespace="com.machine.dao.IMachineDao">
+
+    <resultMap id="machine" type="com.machine.bean.Machine">
+        <id column="machine_id" property="machineId"/>
+        <result column="machine_date" property="machineDate"/>
+        <result column="machine_location" property="machineLocation"/>
+        <result column="machine_capacity" property="machineCapacity"/>
+        <result column="machine_status" property="machineStatus"/>
+        <result column="machine_warning" property="machineWarning"/>
+        <result column="create_time" property="createTime"/>
+        <result column="user_id" property="userId"/>
+        <result column="product_id" property="productId"/>
+    </resultMap>
+
+    <sql id="machineColumns">
+        machine_id,machine_date,machine_location,machine_capacity,machine_status,machine_warning,create_time,user_id,product_id
+    </sql>
+
+    <!--查询所有机器-->
+    <select id="queryAllMachines" resultMap="machine">
+        SELECT <include refid="machineColumns"/> FROM machine
+    </select>
+
+</mapper>
