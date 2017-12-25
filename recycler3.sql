@@ -105,7 +105,7 @@ CREATE TABLE `product` (
 
 /*Data for the table `product` */
 
-insert  into `product`(`product_id`,`product_name`,`product_picture`,`product_price`,`product_is_used`,`product_weight`) values (1,'铁','1.jpg',1.50,1,0.05),(2,'纸','2.jpg',0.50,1,0.05);
+insert  into `product`(`product_id`,`product_name`,`product_picture`,`product_price`,`product_is_used`,`product_weight`) values (1,'铁','1.jpg',1.50,0,0.05),(2,'纸','2.jpg',0.50,1,0.05);
 
 /*Table structure for table `user` */
 
