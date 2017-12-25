@@ -22,7 +22,10 @@ public class OrderInfo {
     private Integer machineId;
     //机器拍照的照片
     private String productPhoto;
-
+    //订单金额
+    private double orderAmount;
+    //物品重量
+    private double productWeight;
     //无参构造
     public OrderInfo() {
     }
@@ -73,5 +76,21 @@ public class OrderInfo {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public double getOrderAmount() {
+        return orderAmount;
+    }
+
+    public void setOrderAmount(double orderAmount) {
+        this.orderAmount = orderAmount;
+    }
+
+    public double getProductWeight() {
+        return productWeight;
+    }
+
+    public void setProductWeight(double productWeight) {
+        this.productWeight = productWeight;
     }
 }

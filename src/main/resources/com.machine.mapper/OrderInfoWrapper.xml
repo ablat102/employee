@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--用户映射文件-->
+
+<mapper namespace="com.machine.dao.IOrderInfoDao">
+
+    <resultMap id="orderInfo" type="com.machine.bean.OrderInfo">
+        <id column="orderinfo_id" property="orderInfoId"/>
+        <result column="user_id" property="userId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="product_photo" property="productPhoto"/>
+        <result column="order_amount" property="orderAmount"/>
+        <association javaType="com.machine.bean.User" property="userId">
+            <id property="userId" column="user_id"/>
+            <result column="user_name" property="userName"/>
+        </association>
+        <association property="productId" javaType="com.machine.bean.Product">
+            <id property="productId" column="product_id"/>
+            <result property="productName" column="product_name"/>
+        </association>
+        <association property="machineId" javaType="com.machine.bean.Machine">
+            <id property="machineId" column="machine_id"/>
+            <result property="createTime" column="create_time"/>
+            <result property="machineLocation" column="machine_location"/>
+            <result property="machineDate" column="machine_date"/>
+        </association>
+    </resultMap>
+
+    <sql id="orderInfoColumns">
+        orderinfo_id,user_id,product_id,create_time,machine_id,product_photo,order_amount
+    </sql>
+    <!--查询所有订单-->
+    <select id="queryAllOrder" resultMap="orderInfo">
+    SELECT o.orderinfo_id,o.create_time,o.order_amount,o.product_weight,
+    o.product_photo, u.user_name,m.create_time,m.machine_location,m.machine_date,p.product_name
+    FROM orderinfo o
+    inner join user u on o.user_id = u.user_id
+    inner join machine m on o.machine_id = m.machine_id
+    inner join product p on o.product_id = p.product_id;
+    </select>
+
+    <!--删除订单-->
+    <delete id="deleteOrderByOrderId" parameterType="int">
+      DELETE FROM orderinfo WHERE orderinfo_id = #{orderInfo}
+    </delete>
+
+    <!--删除所有订单信息-->
+    <delete id="deleteAllOrder">
+
+    </delete>
+</mapper>

@@ -23,9 +23,12 @@ $(document).ready(function () {
 
     }
     sure.on('click',function () {
+        alert("aaa");
         $.ajax({
             url : "addMachine",
             type : "post",
+            dataType : "text",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
             data : {
                 "machineDate" : machineDate.val(),
                 "machineLocation" : machineLocation.val(),

@@ -59,13 +59,15 @@ CREATE TABLE `machine` (
   `product_id` int(11) DEFAULT NULL COMMENT '本机器商品',
   `machine_status` int(2) DEFAULT '1' COMMENT '机器状态，0 坏，1好',
   `machine_capacity` int(2) DEFAULT '1' COMMENT '机器满度，0已满，1未满',
-  `machine_warning` int(2) DEFAULT '1' COMMENT '检测结果提示，1正常，0不正常',
-  `create_time` datetime DEFAULT NULL COMMENT '机器放置时间',
+  `machine_warning` varchar(255) DEFAULT '无' COMMENT '检测提示',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '机器放置时间',
   `user_id` int(11) DEFAULT NULL COMMENT '用户ID',
   PRIMARY KEY (`machine_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 /*Data for the table `machine` */
+
+insert  into `machine`(`machine_id`,`machine_date`,`machine_location`,`product_id`,`machine_status`,`machine_capacity`,`machine_warning`,`create_time`,`user_id`) values (1,'012365','西安市南门',1,1,1,'','2017-12-22 10:43:36',2),(2,'456987','西安市钟楼',2,0,0,'门出现故障','2017-12-22 10:50:37',4),(3,'15623','西安市科技路',2,0,1,'电子秤出现问题','2017-12-22 10:57:50',3),(4,'236985','西安市高新4路',3,1,1,'无','2017-12-22 11:00:07',5),(5,'321345','西安市高新4路',3,1,1,'无','2017-12-22 00:00:00',1);
 
 /*Table structure for table `orderinfo` */
 
@@ -117,7 +119,7 @@ CREATE TABLE `user` (
 
 /*Data for the table `user` */
 
-insert  into `user`(`user_id`,`user_wechat_id`,`user_phone`,`user_is_used`,`user_mony`,`user_alipay_id`,`user_name`,`create_time`) values (1,'asd123','18009293793',1,0.55,'123456','张三','2017-12-21 12:57:22'),(2,'asdasdad123','123123123',1,111111.50,'4679874','李四','2017-12-21 12:58:42'),(3,'啊实打实','2343224',0,0.00,NULL,NULL,'2017-12-21 16:02:37');
+insert  into `user`(`user_id`,`user_wechat_id`,`user_phone`,`user_is_used`,`user_mony`,`user_alipay_id`,`user_name`,`create_time`) values (1,'asd123','18009293793',0,0.55,'123456','张三','2017-12-21 12:57:22'),(2,'asdasdad123','123123123',1,111111.50,'4679874','李四','2017-12-21 12:58:42'),(3,'啊实打实','2343224',0,0.00,NULL,NULL,'2017-12-21 16:02:37');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

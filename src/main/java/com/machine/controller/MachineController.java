@@ -27,43 +27,45 @@ public class MachineController {
 
     /**
      * 查询所有机器
+     *
      * @param request
      * @return
      */
     @RequestMapping("/machineList")
-    public String machineList(HttpServletRequest request){
+    public String machineList(HttpServletRequest request) {
 
         List<Machine> machines = machineService.machineList();
         if (machines != null) {
-            request.setAttribute("machines",machines);
+            request.setAttribute("machines", machines);
         }
         return "machineList";
     }
 
     /**
      * 修改机器信息
+     *
      * @return
      */
-    @RequestMapping(value = "changeMachine",method = RequestMethod.GET)
+    @RequestMapping(value = "changeMachine", method = RequestMethod.GET)
     public String changeMachineInfo() {
         return "changeMachine";
     }
 
-    @RequestMapping(value = "/addMachine",method = RequestMethod.GET)
-    public String addMachine(){
+    @RequestMapping(value = "/addMachine", method = RequestMethod.GET)
+    public String addMachine() {
         return "addMachine";
     }
 
     /**
      * 添加机器
+     *
      * @return 添加机器页面
      */
-    @RequestMapping(value = "/addMachine",method = RequestMethod.POST)
-    public String addMachine(@RequestParam(value = "machineDate",required = true) String machineDate,
-                             @RequestParam(value = "machineLocation",required = true) String machineLocation,
-                             @RequestParam(value = "status" , required = true) String status,
-                             @RequestParam(value = "date",required = true) String date) {
-        System.out.println(machineDate);
-        return machineDate;
+    @RequestMapping(value = "/addMachine", method = RequestMethod.POST)
+    public String addMachine(@RequestParam(value = "machineDate", required = true) String machineDate,
+                             @RequestParam(value = "machineLocation", required = true) String machineLocation,
+                             @RequestParam(value = "status", required = true) String status,
+                             @RequestParam(value = "date", required = true) String date) {
+        return "machineList";
     }
 }

@@ -83,6 +83,20 @@
             <li><cite></cite><a href="${pageContext.request.contextPath}/admin/changeMachine" target="rightFrame">机器管理</a><i></i></li>
         </ul>
     </dd>
+    <%--物品管理--%>
+    <dd>
+        <div class="title">
+                <span>
+                    <img src="${pageContext.request.contextPath}/res/images/i04.png" width="28px"/>
+                </span>订单管理
+            <div style="clear:both;"></div>
+        </div>
+        <ul class="menuson">
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/order/orderList" target="rightFrame">订单列表</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/order/orderList" target="rightFrame">订单管理</a><i></i></li>
+        </ul>
+    </dd>
+    <%--订单管理--%>
     <dd>
         <div class="title">
                 <span>
@@ -91,7 +105,7 @@
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
-            <li><cite></cite><a href="partners.html" target="rightFrame">物品列表</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/product/productList" target="rightFrame">物品列表</a><i></i></li>
             <li><cite></cite><a href="partners.html" target="rightFrame">物品管理</a><i></i></li>
         </ul>
     </dd>

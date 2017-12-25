@@ -18,7 +18,7 @@ public class Product {
     private Double productPrice;
     //物品是否可用（是否显示）
     private int productIsUsed;
-    //物品重量
+    //物品最小重量
     private Double productWeight;
 
     public Product() {
