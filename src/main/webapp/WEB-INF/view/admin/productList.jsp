@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
@@ -24,7 +25,7 @@
 <div style="margin:0 20px;">
 
     <div class="btngroups">
-        <div><a href="${pageContext.request.contextPath}/admin/addMachine">添加机器</a>
+        <div><a href="${pageContext.request.contextPath}/admin/product/addProduct">添加物品</a>
             <a style="margin-left: 20px;">删除</a></div>
         <div class="search">
             <input type="text" value="请输入搜索关键字" style="color: #b5b5b5"/>
@@ -45,32 +46,42 @@
         </tr>
         </thead>
         <tbody>
+        <c:if test="${products != null}">
+            <c:forEach items="${products}" var="product">
                 <tr class="hui">
                     <td><input name="" type="checkbox" value=""/></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td><button class="tablelink" id="change" onclick="change()" style="cursor: pointer">修改</button></td>
+                    <td>${product.productId}</td>
+                    <td>${product.productName}</td>
+                    <td>${product.productPrice}</td>
+                    <c:if test="${product.productIsUsed == 1}">
+                        <td>回收</td>
+                    </c:if>
+                    <c:if test="${product.productIsUsed != 1}">
+                        <td>不回收</td>
+                    </c:if>
+                    <td>${product.productPicture}</td>
+                    <td>
+                        <button class="tablelink" id="change" onclick="change()" style="cursor: pointer">修改</button>
+                    </td>
                 </tr>
-            <tr>没有任何机器！</tr>
+            </c:forEach>
+        </c:if>
         </tbody>
     </table>
-        <div class="pagin">
-            <div class="message">共<i class="blue">${machines.size()}</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
-            <ul class="paginList">
-                <li class="paginItem"><a href="javascript:1;"><span class="pagepre"></span></a></li>
-                <li class="paginItem"><a href="javascript:;">1</a></li>
-                <li class="paginItem current"><a href="javascript:;">2</a></li>
-                <li class="paginItem"><a href="javascript:;">3</a></li>
-                <li class="paginItem"><a href="javascript:;">4</a></li>
-                <li class="paginItem"><a href="javascript:;">5</a></li>
-                <li class="paginItem more"><a href="javascript:;">...</a></li>
-                <li class="paginItem"><a href="javascript:;">10</a></li>
-                <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
-            </ul>
-        </div>
+    <div class="pagin">
+        <div class="message">共<i class="blue">${machines.size()}</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
+        <ul class="paginList">
+            <li class="paginItem"><a href="javascript:1;"><span class="pagepre"></span></a></li>
+            <li class="paginItem"><a href="javascript:;">1</a></li>
+            <li class="paginItem current"><a href="javascript:;">2</a></li>
+            <li class="paginItem"><a href="javascript:;">3</a></li>
+            <li class="paginItem"><a href="javascript:;">4</a></li>
+            <li class="paginItem"><a href="javascript:;">5</a></li>
+            <li class="paginItem more"><a href="javascript:;">...</a></li>
+            <li class="paginItem"><a href="javascript:;">10</a></li>
+            <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
+        </ul>
+    </div>
 </div>
 
 </body>
@@ -79,12 +90,12 @@
 
     function change() {
         $.ajax({
-            url : 'changeUser',
-            type : 'post',
-            success : function () {
+            url: 'changeUser',
+            type: 'post',
+            success: function () {
                 alert("成功了");
             },
-            error : function (e) {
+            error: function (e) {
                 alert(e);
             }
         });

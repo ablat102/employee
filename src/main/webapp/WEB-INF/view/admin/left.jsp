@@ -106,7 +106,7 @@
         </div>
         <ul class="menuson">
             <li><cite></cite><a href="${pageContext.request.contextPath}/admin/product/productList" target="rightFrame">物品列表</a><i></i></li>
-            <li><cite></cite><a href="partners.html" target="rightFrame">物品管理</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/product/addProduct" target="rightFrame">物品管理</a><i></i></li>
         </ul>
     </dd>
     <dd>

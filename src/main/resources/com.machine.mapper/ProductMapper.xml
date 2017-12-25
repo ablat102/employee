@@ -14,11 +14,12 @@
     </resultMap>
 
     <sql id="productColumns">
-        product_id,product_name,product_price,product_picture,product_weight
+        product_id,product_name,product_price,product_picture,product_weight,product_is_used
     </sql>
 
     <select id="queryAllProducts" resultMap="product">
-        SELECT <include refid="productColumns"/>
+        SELECT
+        <include refid="productColumns"/>
         FROM product
     </select>
 
