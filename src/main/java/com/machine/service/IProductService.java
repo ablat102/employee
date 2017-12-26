@@ -8,4 +8,10 @@ public interface IProductService {
 
     List<Product> productList();
 
+    int addProduct(Product product);
+
+    int deleteProduct(Integer productId);
+
+    int deleteAllProducts(Product product);
+
 }

@@ -29,4 +29,14 @@ public class ProductTest {
         }
     }
 
+    @Test
+    public void addProductTest() throws Exception {
+        product.setProductName("手机");
+        product.setProductPicture("21.jpg");
+        product.setProductPrice(1000.2);
+        product.setProductIsUsed(1);
+        int i = productService.addProduct(product);
+        System.out.println(i);
+    }
+
 }

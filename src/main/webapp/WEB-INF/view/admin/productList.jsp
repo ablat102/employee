@@ -11,10 +11,11 @@
 <html>
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
 <link href="${pageContext.request.contextPath}/res/css/style.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="${pageContext.request.contextPath}/res/js/jquery1.42.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/res/js/jquery-3.2.1.min.js"></script>
 <script language="JavaScript" src="${pageContext.request.contextPath}/res/js/select.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/res/js/jquery.SuperSlide.2.1.1.js"></script>
 <script language="JavaScript" src="${pageContext.request.contextPath}/res/js/common.js"></script>
+<script language="JavaScript" src="${pageContext.request.contextPath}/res/js/product.js"></script>
 <title>机器列表</title>
 <script type="text/javascript">
 </script>
@@ -26,7 +27,7 @@
 
     <div class="btngroups">
         <div><a href="${pageContext.request.contextPath}/admin/product/addProduct">添加物品</a>
-            <a style="margin-left: 20px;">删除</a></div>
+            <a style="margin-left: 20px;" class="delete">删除</a></div>
         <div class="search">
             <input type="text" value="请输入搜索关键字" style="color: #b5b5b5"/>
             <a>搜索</a>
@@ -47,10 +48,10 @@
         </thead>
         <tbody>
         <c:if test="${products != null}">
-            <c:forEach items="${products}" var="product">
+            <c:forEach items="${products}" var="product" varStatus="i">
                 <tr class="hui">
-                    <td><input name="" type="checkbox" value=""/></td>
-                    <td>${product.productId}</td>
+                    <td><input name="check" type="checkbox" value=""/></td>
+                    <td>${i.index + 1}</td>
                     <td>${product.productName}</td>
                     <td>${product.productPrice}</td>
                     <c:if test="${product.productIsUsed == 1}">
@@ -85,21 +86,5 @@
 </div>
 
 </body>
-<!-------修改用户状态js--------->
-<script type="text/javascript">
 
-    function change() {
-        $.ajax({
-            url: 'changeUser',
-            type: 'post',
-            success: function () {
-                alert("成功了");
-            },
-            error: function (e) {
-                alert(e);
-            }
-        });
-    }
-
-</script>
 </html>

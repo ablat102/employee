@@ -25,7 +25,7 @@
             //点击转派弹框
             $(".delete").click(function () {
                 if ($(":checkbox:checked").length == 0) {
-                    alert("请选择要删除的员工")
+                    alert("请选择要删除的管理员")
                 } else {
 
                 }

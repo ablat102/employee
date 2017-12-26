@@ -12,20 +12,23 @@
         <result column="create_time" property="createTime"/>
         <result column="product_photo" property="productPhoto"/>
         <result column="order_amount" property="orderAmount"/>
-        <association javaType="com.machine.bean.User" property="userId">
-            <id property="userId" column="user_id"/>
-            <result column="user_name" property="userName"/>
-        </association>
-        <association property="productId" javaType="com.machine.bean.Product">
-            <id property="productId" column="product_id"/>
-            <result property="productName" column="product_name"/>
-        </association>
-        <association property="machineId" javaType="com.machine.bean.Machine">
-            <id property="machineId" column="machine_id"/>
-            <result property="createTime" column="create_time"/>
-            <result property="machineLocation" column="machine_location"/>
-            <result property="machineDate" column="machine_date"/>
-        </association>
+        <result column="user_id" property="userId"/>
+        <result column="product_id" property="productId"/>
+        <result column="product_weight" property="productWeight"/>
+        <!--<association javaType="com.machine.bean.User" property="userId">-->
+            <!--<id property="userId" column="user_id"/>-->
+            <!--<result column="user_name" property="userName"/>-->
+        <!--</association>-->
+        <!--<association property="productId" javaType="com.machine.bean.Product">-->
+            <!--<id property="productId" column="product_id"/>-->
+            <!--<result property="productName" column="product_name"/>-->
+        <!--</association>-->
+        <!--<association property="machineId" javaType="com.machine.bean.Machine">-->
+            <!--<id property="machineId" column="machine_id"/>-->
+            <!--<result property="createTime" column="create_time"/>-->
+            <!--<result property="machineLocation" column="machine_location"/>-->
+            <!--<result property="machineDate" column="machine_date"/>-->
+        <!--</association>-->
     </resultMap>
 
     <sql id="orderInfoColumns">

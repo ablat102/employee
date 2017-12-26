@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -21,37 +22,62 @@ import java.util.List;
 public class ProductController {
     @Autowired
     private IProductService productService;
+    @Autowired
+    private Product product;
+
     /**
      * 物品列表页面
+     *
      * @return 物品列表页面
      */
-    @RequestMapping(value = "productList",method = RequestMethod.GET)
-    public String productList(HttpServletRequest request){
+    @RequestMapping(value = "productList", method = RequestMethod.GET)
+    public String productList(HttpServletRequest request) {
         List<Product> products = productService.productList();
         if (products != null) {
-            request.setAttribute("products",products);
+            request.setAttribute("products", products);
         }
 
         return "productList";
     }
 
-    @RequestMapping(value = "addProduct",method = RequestMethod.GET)
-    public String addProduct(){
+    @RequestMapping(value = "addProduct", method = RequestMethod.GET)
+    public String addProduct() {
         return "addProduct";
     }
 
-    @RequestMapping(value = "addProduct",method = RequestMethod.POST)
+    /**
+     * 添加物品
+     *
+     * @param productName
+     * @param status
+     * @param productPrice
+     * @return
+     */
+    @RequestMapping(value = "addProduct", method = RequestMethod.POST)
     @ResponseBody
-    public String addProduct(
-            @RequestParam(value = "productName",required = false) String productName ,
-            @RequestParam(value = "status",required = false) Integer status,
-            @RequestParam(value = "productPrice",required = false) Double productPrice,
-            @RequestParam(value = "productWeight",required = false) Double productWeight ) {
-        if (productName != null
-                 ) {
-            System.out.println(productName);
-            return productPrice.toString();
+    public int addProduct(
+            @RequestParam(value = "productName", required = false) String productName,
+            @RequestParam(value = "status", required = false) Integer status,
+            @RequestParam(value = "productPrice", required = false) double productPrice,
+            @RequestParam(value = "productPicture", required = false) String productPicture,
+            MultipartFile uploadFile) {
+        System.out.println(productName);
+        product.setProductName(productName);
+        product.setProductPrice(productPrice);
+        product.setProductPicture(productPicture);
+        product.setProductIsUsed(status);
+        int i = productService.addProduct(product);
+//            如果返回的是0 ，则传递参数空，1 添加成功 ， 2 已经有该物品
+        if (i == 0) {
+            return 1;
         }
-        return productName;
+        return 0;
+    }
+
+
+    @RequestMapping(value = "deleteProduct", method = RequestMethod.POST)
+    public String deleteProduct(@RequestParam(value = "productId", required = true) Integer productId) {
+        System.out.println(productId);
+        return "productList";
     }
 }

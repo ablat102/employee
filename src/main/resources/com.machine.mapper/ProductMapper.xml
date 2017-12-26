@@ -16,11 +16,13 @@
     <sql id="productColumns">
         product_id,product_name,product_price,product_picture,product_weight,product_is_used
     </sql>
-
+    <sql id="productColumns1">
+        product_id,product_name,product_price,product_picture,product_is_used
+    </sql>
     <select id="queryAllProducts" resultMap="product">
         SELECT
         <include refid="productColumns"/>
-        FROM product
+        FROM products
     </select>
 
     <delete id="deleteAllProducts">
@@ -31,4 +33,11 @@
         DELETE FROM product
         WHERE product_id = #{productId}
     </delete>
+
+    <insert id="addProduct" parameterType="com.machine.bean.Product" >
+      INSERT INTO product(<include refid="productColumns1"/>)
+        VALUES (
+        #{productId},#{productName},#{productPrice},#{productPicture},#{productIsUsed}
+        )
+    </insert>
 </mapper>

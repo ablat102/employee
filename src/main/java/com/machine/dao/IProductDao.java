@@ -1,6 +1,7 @@
 package com.machine.dao;
 
 import com.machine.bean.Product;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -28,5 +29,13 @@ public interface IProductDao {
      * @return 行数
      */
     public int deleteProductsByProductId(Integer productId);
+
+    /**
+     * 添加物品
+     * @param product 物品对象
+     * @return 成功添加的个数
+     */
+    public int addProduct(Product product);
+
 
 }

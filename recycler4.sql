@@ -77,13 +77,17 @@ CREATE TABLE `orderinfo` (
   `orderinfo_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '订单编号',
   `user_id` int(11) DEFAULT NULL COMMENT '用户编号',
   `product_id` int(11) DEFAULT NULL COMMENT '商品编号',
-  `create_time` datetime DEFAULT NULL COMMENT '下单时间',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '下单时间',
   `machine_id` int(11) DEFAULT NULL COMMENT '机器编号',
   `product_photo` varchar(255) DEFAULT NULL COMMENT '物品照片（机器拍照）',
+  `order_amount` double(7,2) unsigned NOT NULL COMMENT '订单金额',
+  `product_weight` double(10,2) DEFAULT NULL COMMENT '物品重量',
   PRIMARY KEY (`orderinfo_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `orderinfo` */
+
+insert  into `orderinfo`(`orderinfo_id`,`user_id`,`product_id`,`create_time`,`machine_id`,`product_photo`,`order_amount`,`product_weight`) values (2,2,2,'2017-12-25 10:09:46',1,'2',30.30,NULL),(3,1,2,'2017-12-25 10:09:58',3,'2',1.00,NULL);
 
 /*Table structure for table `product` */
 
@@ -91,15 +95,18 @@ DROP TABLE IF EXISTS `product`;
 
 CREATE TABLE `product` (
   `product_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '物品编号',
-  `product_name` varchar(50) DEFAULT NULL COMMENT '物品名称',
+  `product_name` varchar(50) NOT NULL COMMENT '物品名称',
   `product_picture` varchar(255) DEFAULT NULL COMMENT '物品图片',
   `product_price` double(6,2) DEFAULT NULL COMMENT '物品价格',
   `product_is_used` int(2) DEFAULT '1' COMMENT '物品是否可用，0不可用，1可用',
-  `product_weight` double(6,2) DEFAULT NULL COMMENT '物品重量',
-  PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `product_weight` double(6,2) DEFAULT '0.05' COMMENT '物品重量',
+  PRIMARY KEY (`product_id`),
+  UNIQUE KEY `product_name` (`product_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 /*Data for the table `product` */
+
+insert  into `product`(`product_id`,`product_name`,`product_picture`,`product_price`,`product_is_used`,`product_weight`) values (1,'合金钻头','1.jpg',1.50,0,0.05),(2,'发泡塑料','2.jpg',0.50,1,0.05),(10,'金刚石钻头',NULL,5.00,1,0.05);
 
 /*Table structure for table `user` */
 

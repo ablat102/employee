@@ -18,8 +18,9 @@ public class Product {
     private Double productPrice;
     //物品是否可用（是否显示）
     private Integer productIsUsed;
+
     //物品最小重量
-    private Double productWeight;
+    private double productWeight;
 
     public Product() {
     }
@@ -63,12 +64,11 @@ public class Product {
     public void setProductIsUsed(Integer productIsUsed) {
         this.productIsUsed = productIsUsed;
     }
-
-    public Double getProductWeight() {
+    public double getProductWeight() {
         return productWeight;
     }
 
-    public void setProductWeight(Double productWeight) {
+    public void setProductWeight(double productWeight) {
         this.productWeight = productWeight;
     }
 }

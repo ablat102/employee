@@ -16,7 +16,7 @@
     <script language="JavaScript" src="${pageContext.request.contextPath}/res/js/jquery-3.2.1.min.js"></script>
     <script src="${pageContext.request.contextPath}/res/js/My97DatePicker/WdatePicker.js"
             type="text/javascript"></script>
-    <script src="${pageContext.request.contextPath}/res/js/machine.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/res/js/product.js" type="text/javascript"></script>
     <title>添加商品</title>
     <style type="">
         .table-user {
@@ -101,8 +101,10 @@
 
         <tbody>
         <tr>
-            <td><label>物品名称：</label>
+            <td>
+                <label>物品名称：</label>
                 <input type="text" class="productName" name="productName" placeholder="请输入回收物品名称"/>
+                <label class="productNameErr" style="color: red;">*必填，物品名称必须是汉字</label>
             </td>
             <td><label>是否回收：</label>
                 是<input type="radio" name="status" value="1" checked style="width: 30px;height: 20px;"/>
@@ -110,10 +112,21 @@
             </td>
         </tr>
         <tr>
-            <td><label>回收单价：</label><input type="text" placeholder="请输入回收单价/元" name="productPrice"
-                                           class="productPrice"/></td>
-            <td><label>最低回收量：</label><input type="text" placeholder="请输入最低回收量/Kg" name="productWeight"
-                                           class="productWeight"/></td>
+            <td>
+                <label>回收单价：</label>
+                <input type="text" placeholder="请输入回收单价/元" name="productPrice"
+                                           class="productPrice"/>
+                <label class="productPriceErr" style="color: red;">*必填，物品单价是只能数字组成</label>
+            </td>
+            <td>
+                <%--<label>最低回收量：</label>--%>
+                <%--<input type="text" placeholder="请输入最低回收量/Kg" name="productWeight"--%>
+                                           <%--class="productWeight"/>--%>
+                <%--<label class="productWeightErr" style="color: red;">*必填，物品重量只能是数字组成</label>--%>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <input type="file" name="picture" accept="image/gif,image/jpeg,image/png ">
+                    </form>
+            </td>
         </tr>
 
         </tbody>
@@ -137,44 +150,7 @@
 </div>
 
 <script>
-    $(function () {
-        //验证物品名称
-        function validateIsNull(obj) {
-            if (obj.val() != null){
-                return true;
-            }
-            return false;
-        }
 
-
-        function validateAll(){
-            return validateIsNull($('.productName')) &&
-            validateIsNull($('.productPrice')) &&
-            validateIsNull($('.productWeight')) ;
-
-        }
-
-        var addProducts = $('#addProduct');
-        addProducts.on('click',function () {
-
-            $.ajax({
-                url : 'addProduct',
-                type : 'post',
-                data : {
-                    'productName' : $('.productName').val(),
-                    'status' : $('.status:checked').val(),
-                    'productPrice' : $('.productPrice').val(),
-                    'productWeight' : $('.productWeight').val()
-                },
-                success : function (data) {
-                    alert(data);
-                },
-                error : function () {
-                    alert("发送失败");
-                }
-            });
-        });
-    })
 
 </script>
 

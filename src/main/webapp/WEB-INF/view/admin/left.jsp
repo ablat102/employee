@@ -69,8 +69,10 @@
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
-            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/userList" target="rightFrame">用户列表</a><i></i></li>
-            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/changeUser" target="rightFrame">用户管理</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/userList"
+                                target="rightFrame">用户列表</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/changeUser"
+                                target="rightFrame">用户管理</a><i></i></li>
         </ul>
     </dd>
     <dd>
@@ -79,8 +81,10 @@
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
-            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/machineList" target="rightFrame">机器列表</a><i></i></li>
-            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/changeMachine" target="rightFrame">机器管理</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/machineList" target="rightFrame">机器列表</a><i></i>
+            </li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/changeMachine"
+                                target="rightFrame">机器管理</a><i></i></li>
         </ul>
     </dd>
     <%--物品管理--%>
@@ -92,8 +96,10 @@
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
-            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/order/orderList" target="rightFrame">订单列表</a><i></i></li>
-            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/order/orderList" target="rightFrame">订单管理</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/order/orderList"
+                                target="rightFrame">订单列表</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/order/orderList"
+                                target="rightFrame">订单管理</a><i></i></li>
         </ul>
     </dd>
     <%--订单管理--%>
@@ -105,8 +111,10 @@
             <div style="clear:both;"></div>
         </div>
         <ul class="menuson">
-            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/product/productList" target="rightFrame">物品列表</a><i></i></li>
-            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/product/addProduct" target="rightFrame">物品管理</a><i></i></li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/product/productList" target="rightFrame">物品列表</a><i></i>
+            </li>
+            <li><cite></cite><a href="${pageContext.request.contextPath}/admin/product/addProduct" target="rightFrame">物品管理</a><i></i>
+            </li>
         </ul>
     </dd>
     <dd>
@@ -121,19 +129,6 @@
             <li><cite></cite><a href="person.html" target="rightFrame">系统管理</a><i></i></li>
             <li><cite></cite><a href="KPI.html" target="rightFrame">其他</a><i></i></li>
             <li><cite></cite><a href="password" target="rightFrame">其他</a><i></i></li>
-        </ul>
-
-    </dd>
-    <dd>
-        <div class="title">
-                <span>
-                    <img src="${pageContext.request.contextPath}/res/images/c03.png" width="28px"/>
-                </span>订单管理
-            <div style="clear:both;"></div>
-        </div>
-        <ul class="menuson">
-            <li><cite></cite><a href="turn.html" target="rightFrame">日志列表</a><i></i></li>
-            <li><cite></cite><a href="turn.html" target="rightFrame">日志管理</a><i></i></li>
         </ul>
 
     </dd>
